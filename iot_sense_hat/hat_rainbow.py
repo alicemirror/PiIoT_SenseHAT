@@ -58,7 +58,7 @@ class HatRainbow():
 
     def rainbow(self):
         '''
-        Generate the rainbox screen calculating the next pixel clour for every pixel
+        Generate the rainbow screen calculating the next pixel colour for every pixel
         Note that changing the order of the pixels array visiting the rainbow direction changes
         :return:
         '''

@@ -1,9 +1,12 @@
 import sys
 import time
-from iot_sense_hat import SenseHat
+from .sense_hat import SenseHat
 from evdev import ecodes
 
 class DisplayJoystick():
+    '''
+    Helper class showing the joystick position on the display
+    '''
     def __init__(self):
         self.sense = SenseHat()
 

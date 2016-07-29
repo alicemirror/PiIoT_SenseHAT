@@ -1,11 +1,12 @@
 '''
 SenseHAT management classes
 
-A set of classes and methods to manage the device properties
+A set of classes and methods to manage the device properties easily without the need
+to implement multiple API calls
 
 '''
 
-from iot_sense_hat import SenseHat
+from .sense_hat import SenseHat
 from evdev import InputDevice, list_devices, ecodes
 import time
 from threading import Thread
@@ -15,13 +16,14 @@ Constants
 '''
 SCROLL_SPEED = 0.1
 DEBUG = True
-STARTUP = "PiIoT v. 0.1, Balearic Dynamics"
+STARTUP = "PiIoT 1.0.1b Balearic Dynamics"
 STARTUP_COLOR = [20, 20, 128]
 JOYSTICK_NAME = "Raspberry Pi Sense HAT Joystick"
 
 '''
 Manage the SenseHAT environment status
-This class includes a series of methods with a high level APIs methods to simplify the management of the display
+This class includes a series of high level APIs
+to simplify the management of the display
 and the sensors, finalised to the IoT application
 '''
 class EnvironmentStatus():

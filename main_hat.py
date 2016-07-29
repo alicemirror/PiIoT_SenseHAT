@@ -10,6 +10,8 @@ import time
 from iot_sense_hat.display_joystick import DisplayJoystick
 from iot_sense_hat.hat_manager import Screen, Joystick
 from iot_sense_hat.hat_rainbow import HatRainbow
+from iot_sense_hat.utility import IPStuff
+from iot_sense_hat.hat_manager import EnvironmentStatus
 
 
 def joystickDispatcher(keycode, status):
@@ -37,25 +39,25 @@ if __name__ == '__main__':
     # # Startup message
     hatScreen = Screen()
     hatScreen.clear()
-    # hatScreen.startup()
-    #
-    # # Sensors
-    # hatSensors = EnvironmentStatus()
-    # print ("Avg Temp = ", hatSensors.getAvgTemperature())
-    # print ("Global Env = ", hatSensors.getEnvironment())
-    #
-    # # Node IP address
-    # nodeIP = IPStuff()
-    # hatScreen.clear()
-    # hatScreen.msg(nodeIP.getHostName() + " - " + nodeIP.getIP())
-    #
-    # # Joystick
-    # joy = Joystick()
-    #
-    # # Executes the joystick control in the main application
-    # # CTRL-C to stop and go ahead
-    # print("Joystick is running in the main thread. Press CTRL-C to end")
-    # joy.loopJoystick(joystickDispatcher)
+    hatScreen.startup()
+
+    # Sensors
+    hatSensors = EnvironmentStatus()
+    print ("Avg Temp = ", hatSensors.getAvgTemperature())
+    print ("Global Env = ", hatSensors.getEnvironment())
+
+    # Node IP address
+    nodeIP = IPStuff()
+    hatScreen.clear()
+    hatScreen.msg(nodeIP.getHostName() + " - " + nodeIP.getIP())
+
+    # Joystick
+    joy = Joystick()
+
+    # Executes the joystick control in the main application
+    # CTRL-C to stop and go ahead
+    print("Joystick is running in the main thread. Press CTRL-C to end")
+    joy.loopJoystick(joystickDispatcher)
 
     # Executes the joystick control in a separate thread
     joyThread = Joystick(joystickDispatcher, 1)
