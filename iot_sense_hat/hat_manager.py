@@ -5,7 +5,7 @@ A set of classes and methods to manage the device properties
 
 '''
 
-from sense_hat2 import SenseHat
+from iot_sense_hat import SenseHat
 from evdev import InputDevice, list_devices, ecodes
 import time
 from threading import Thread

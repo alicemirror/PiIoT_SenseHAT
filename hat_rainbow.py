@@ -1,5 +1,5 @@
 import time
-from sense_hat2 import SenseHat
+from iot_sense_hat import SenseHat
 
 '''
 SenseHAT general purpose rainbow generator class

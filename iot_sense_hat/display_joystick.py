@@ -1,6 +1,6 @@
 import sys
 import time
-from sense_hat2 import SenseHat
+from iot_sense_hat import SenseHat
 from evdev import ecodes
 
 class DisplayJoystick():

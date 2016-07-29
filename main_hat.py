@@ -5,11 +5,12 @@ This application executes a series of initial actions then start polling the sen
 accordingly with the project features.
 '''
 
-from hat_manager import Screen, EnvironmentStatus, Joystick
-from utility import IPStuff
-from hat_rainbow import HatRainbow
-from display_joystick import DisplayJoystick
 import time
+
+from hat_rainbow import HatRainbow
+from iot_sense_hat.display_joystick import DisplayJoystick
+from iot_sense_hat.hat_manager import Screen, Joystick
+
 
 def joystickDispatcher(keycode, status):
     '''
