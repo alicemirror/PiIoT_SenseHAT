@@ -7,9 +7,9 @@ accordingly with the project features.
 
 import time
 
-from hat_rainbow import HatRainbow
 from iot_sense_hat.display_joystick import DisplayJoystick
 from iot_sense_hat.hat_manager import Screen, Joystick
+from iot_sense_hat.hat_rainbow import HatRainbow
 
 
 def joystickDispatcher(keycode, status):
